@@ -1,0 +1,40 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Video Scrubbing</title>
+        <meta charset="utf-8" />
+        <meta name="description" content="" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="stylesheet" href="main.css" />
+        <link rel="preload" href="https://video-scrub.playground.ghosh.dev/videos/ForBiggerBlazes.mp4" as="video" />
+    </head>
+    <body>
+        <div id="content">
+            <h1>
+                Video Scrubbing
+            </h1>
+            <h2>
+                <code>video-server-frames</code>
+            </h2>
+            <section>
+                <pre id="comments"></pre>
+            </section>
+            <section class="canvas-container" id="canvas-container">
+                <input
+                    name="frames-url"
+                    type="hidden"
+                    value="extracted-frames/frame-{{id}}.jpg"
+                    data-frame-start="1"
+                    data-frame-end="242"
+                    data-frame-id-padding="3"
+                />
+            </section>
+        </div>
+        <script src="utils.js"></script>
+        <script src="scroll-observable.js"></script>
+        <script src="canvas-frame-scrubber.js"></script>
+        <script src="frame-unpacker.js"></script>
+        <script src="main.js"></script>
+    </body>
+</html>
